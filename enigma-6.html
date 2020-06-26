@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape-Chess</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" align="center">
+        <h1 class="navbar-brand">Scape Room Ajedrecístico</h1>
+                 
+        <div class="form-inline my-2 my-lg-0" align="right" >
+                <div class="btn btn-light my-2 my-sm-0" align="right"><a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a></div>                     
+        </div>
+      </nav>
+<div class="container">
+    <section class="jumbotron">
+        <div align="center">
+        <img src="img/reti-2.jpg" alt="" class="img-fluid">
+        <h2 align="center">La maniobra de Reti.</h2>
+        <p>El final de una partida de ajedrez es la fase más importante de la partida, pues mal jugado puede hacer que por mucha ventaja que tengamos perdamos la partida</p>
+        <img src="img/final-reti.jpeg" class="img-fluid" alt="">
+        <p>Richard Reti fue uno de los grandes jugadores que aportaron gran valor para jugar bien los finales. La posición de Reti o maniobra Reti es una de las más famosas, pero ¿ cómo se soluciona? ( escribe los movimientos que se juegan) </p>
+        1. <input type="text" class="form-control" id="x1">
+        2. <input type="text" class="form-control" id="x2">
+        3. <input type="text" class="form-control" id="x3">
+        4. <input type="text" class="form-control" id="x4">
+        5. <input type="text" class="form-control" id="x5">
+        <input type="submit" onclick="verificar();" value="Enviar">
+   
+<script>
+        function verificar(){
+      
+                var x1= "Rg7 h4";
+                var x2= "Rf6 Rb6";
+                var x3= "Re5 h3";
+                var x4= "Rd6 h2";
+                var x5= "c7";
+                var b1= document.getElementById("x1").value ;
+                var b2= document.getElementById("x2").value ;
+                var b3= document.getElementById("x3").value ;
+                var b4= document.getElementById("x4").value ;
+                var b5= document.getElementById("x5").value ;
+        
+                if(x1==b1 && x2==b2 && x3==b3 && x4==b4 && x5==b5){
+                     return document.getElementById("oculto").style.visibility= "visible";
+                }
+        }
+</script>
+        </div>
+        <div id="oculto" style="visibility: hidden;">
+            <h2 align="center">
+                La letra secreta es la L.
+            </h2>
+        </div>
+    </section>
+</div>
+<footer class="card-header">
+    
+        <article align="center">
+            <a href="enigmas.html"><button class="btn btn-dark">Volver</button></a>
+        
+            
+        </article>
+    
+</footer>
+
+</body>
+</html>

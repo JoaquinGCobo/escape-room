@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape-Chess</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" align="center">
+        <h1 class="navbar-brand">Scape Room Ajedrecístico</h1>
+                 
+        <div class="form-inline my-2 my-lg-0" align="right" >
+                <div class="btn btn-light my-2 my-sm-0" align="right"><a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a></div>                     
+        </div>
+      </nav>
+<div class="container">
+    <section class="jumbotron">
+        <div align="center">
+        <img src="img/ruy-lopez.jpg" alt="" class="img-fluid">
+        <h2 align="center">Ruy López</h2>
+        <p>Ruy López de Segura fue un clérigo confesor del rey Felipe II, amante del ajedrez que llegó a ser el mejor jugador de ajedrez de su época y el primer campeón del mundo <i>de forma oficiosa</i></p>
+        <p>Su fama fue tal que los ajedrecistas conocen la apertura española con el nombre de Ruy López. Pero ¿ qué movimiento de alfil caracteriza a esta apertura?</p>
+        <input type="text" class="form-control" id="nombre">
+        <input type="submit" onclick="verificar();" value="Enviar">
+   
+<script>
+        function verificar(){
+      
+                var nom= "Ab5";
+                var nom2= document.getElementById("nombre").value ;
+        
+                if(nom==nom2){
+                     return document.getElementById("oculto").style.visibility= "visible";
+                }
+        }
+</script>
+        </div>
+        <div id="oculto" style="visibility: hidden;">
+            <h2 align="center">
+                La letra secreta es la E.
+            </h2>
+        </div>
+    </section>
+</div>
+<footer class="card-header">
+    
+        <article align="center">
+            <a href="enigmas.html"><button class="btn btn-dark">Volver</button></a>
+        
+            
+        </article>
+    
+</footer>
+
+</body>
+</html>

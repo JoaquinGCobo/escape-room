@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape-Chess</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" align="center">
+        <h1 class="navbar-brand">Scape Room Ajedrecístico</h1>
+                 
+        <div class="form-inline my-2 my-lg-0" align="right" >
+                <div class="btn btn-light my-2 my-sm-0" align="right"><a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a></div>                     
+        </div>
+      </nav>
+<div class="container">
+    <section class="jumbotron">
+        <h1>Por favor, introduzca las letras de la clave:</h1>
+        Enigma 6<input type="text" class="form-control" id="x1">
+        Enigma 3 <input type="text" class="form-control" id="x2">
+        Enigma 1<input type="text" class="form-control" id="x3">
+        Enigma 4<input type="text" class="form-control" id="x4">
+        Enigma 2<input type="text" class="form-control" id="x5">
+        Enigma 5 <input type="text" class="form-control" id="x6">
+        <input type="submit" onclick="verificar();" value="Enviar">
+   
+<script>
+        function verificar(){
+      
+                var x1= "L";
+                var x2= "U";
+                var x3= "C";
+                var x4= "E";
+                var x5= "N";
+                var x6= "A"
+                var b1= document.getElementById("x1").value ;
+                var b2= document.getElementById("x2").value ;
+                var b3= document.getElementById("x3").value ;
+                var b4= document.getElementById("x4").value ;
+                var b5= document.getElementById("x5").value ;
+                var b6= document.getElementById("x6").value ;
+        
+                if(x1==b1 && x2==b2 && x3==b3 && x4==b4 && x5==b5 && x6==b6){
+                     return document.getElementById("oculto").style.visibility= "visible";
+                }
+        }
+</script>
+    </section>
+</div>
+<footer class="card-header">
+    
+        <article align="center">
+            
+            <a href="enigmas.html"><button class="btn btn-dark">ANTERIOR</button></a>
+            <a href="historia-4.html" id="oculto" style="visibility:hidden;"><button class="btn btn-dark">SIGUIENTE</button></a>
+        </article>
+    
+</footer>
+
+</body>
+</html>
